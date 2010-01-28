@@ -1,0 +1,6 @@
+auto: false
+destination: ../public
+markdown: rdiscount
+pygments: false
+permalink: /blog/:year/:month/:day/:title
+# exclude: [ ".git", "public", "Rakefile" ]

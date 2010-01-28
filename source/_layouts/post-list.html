@@ -1,0 +1,45 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+	"http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+
+	<title>{{ page.title }}</title>
+	<meta name="author" content="Jim Myhrberg" />
+   <link href="http://jimeh.me/blog/atom.xml" rel="alternate" title="jimeh.me" type="application/atom+xml" />
+	
+	<link rel="stylesheet" href="/stylesheets/font-face.css" type="text/css" media="screen" title="no title" charset="utf-8" />
+	<link rel="stylesheet" href="/stylesheets/reset.css" type="text/css" media="screen" title="no title" charset="utf-8" />
+	<link rel="stylesheet" href="/stylesheets/text.css" type="text/css" media="screen" title="no title" charset="utf-8" />
+	<link rel="stylesheet" href="/stylesheets/screen.css" type="text/css" media="screen" title="no title" charset="utf-8" />
+	
+</head>
+
+<body>
+
+<div id="universe">
+	
+	<div id="header">
+		<div id="title">
+			
+		</div>
+		<div id="navigation">
+			<a href="/">about</a>
+			<a href="/blog/" class="selected">blog</a>
+			<a href="/portfolio/">portfolio</a>
+			<a href="/contact/">contact</a>
+		</div>
+		<div class="clear"></div>
+	</div>
+	
+	<div class="post-world">
+		{{ content }}
+	</div>
+	
+</div>
+
+{% include disqus_load.html %}
+
+</body>
+</html>
