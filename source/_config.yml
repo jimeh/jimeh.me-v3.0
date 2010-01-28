@@ -1,5 +1,5 @@
 auto: false
 destination: ../public
 markdown: rdiscount
-pygments: false
+pygments: true
 permalink: /blog/:year/:month/:day/:title
