@@ -12,6 +12,10 @@ task :build do
   system "jekyll ./source ./public"
 end
 
+task :assets do
+  rsync "assets/", "public/"
+end
+
 task :server do
   system "jekyll ./source ./public --server --auto"
 end
