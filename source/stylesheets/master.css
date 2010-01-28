@@ -267,7 +267,7 @@ h6 {
 
 /* @end */
 
-/* @group Main Element IDs */
+/* @group Main Elements */
 
 #universe {
 	margin: 0px auto;
@@ -280,8 +280,19 @@ h6 {
 }
 
 #title {
+	color: #f4f4f4;
+	margin-top: -45px;
 	float: left;
+	font-size: 75px;
 }
+	#title a {
+		color: #f4f4f4;
+	}
+		#title a:hover {
+			color: #f4f4f4;
+			text-decoration: none;
+			/*border: none;*/
+		}
 
 /* @group #navigation */
 
@@ -415,6 +426,9 @@ blockquote {
 	.post-title a {
 		color: #000;
 	}
+		.post-title a:hover {
+			border-bottom: 1px dotted #ccc !important;
+		}
 
 /* @end */
 
@@ -451,9 +465,6 @@ blockquote {
 /* @end */
 
 .post-comments {
-	margin-top: 25px;
-	padding-top: 8px;
-	border-top: 1px solid #ccc;
 }
 
 /* @group .post-comment-link */
@@ -477,6 +488,11 @@ blockquote {
 	#disqus_thread h3 {
 		font-family: 'ColaborateLightRegular';
 		font-size: 20px;
+	}
+	#dsq-content {
+		border-top: 1px solid #ccc;
+		padding-top: 8px;
+		margin-top: 25px;
 	}
 
 /* @end */

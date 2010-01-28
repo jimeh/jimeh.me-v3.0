@@ -2,4 +2,5 @@ auto: false
 destination: ../public
 markdown: rdiscount
 pygments: true
+lsi: false
 permalink: /blog/:year/:month/:day/:title
