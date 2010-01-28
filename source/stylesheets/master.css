@@ -1,5 +1,64 @@
 /* @override http://new.jimeh.meh/stylesheets/master.css */
 
+/* @group @font-face */
+
+@font-face {
+	font-family: 'Colaborate-ThinRegular';
+	src: url('/resources/fonts/ColabThi.eot');
+	src: local('Colaborate-Thin Regular'), local('Colaborate-Thin'), url('/resources/fonts/ColabThi.ttf') format('truetype');
+}
+
+@font-face {
+	font-family: 'ColaborateLightRegular';
+	src: url('/resources/fonts/ColabLig.eot');
+	src: local('ColaborateLight Regular'), local('Colaborate-Light'), url('/resources/fonts/ColabLig.ttf') format('truetype');
+}
+
+@font-face {
+	font-family: 'Colaborate-RegularRegular';
+	src: url('/resources/fonts/ColabReg.eot');
+	src: local('Colaborate-Regular Regular'), local('Colaborate-Regular'), url('/resources/fonts/ColabReg.ttf') format('truetype');
+}
+
+@font-face {
+	font-family: 'Colaborate-MediumRegular';
+	src: url('/resources/fonts/ColabMed.eot');
+	src: local('Colaborate-Medium Regular'), local('Colaborate-Medium'), url('/resources/fonts/ColabMed.ttf') format('truetype');
+}
+
+@font-face {
+	font-family: 'Colaborate-BoldRegular';
+	src: url('/resources/fonts/ColabBol.eot');
+	src: local('Colaborate-Bold Regular'), local('Colaborate-Bold'), url('/resources/fonts/ColabBol.ttf') format('truetype');
+}
+
+
+@font-face {
+	font-family: 'DejaVuSansMonoBook';
+	src: url('/resources/fonts/DejaVuSansMono.eot');
+	src: local('DejaVu Sans Mono Book'), local('DejaVuSansMono'), url('/resources/fonts/DejaVuSansMono.ttf') format('truetype');
+}
+
+@font-face {
+	font-family: 'DejaVuSansMonoOblique';
+	src: url('/resources/fonts/DejaVuSansMono-Oblique.eot');
+	src: local('DejaVu Sans Mono Oblique'), local('DejaVuSansMono-Oblique'), url('/resources/fonts/DejaVuSansMono-Oblique.ttf') format('truetype');
+}
+
+@font-face {
+	font-family: 'DejaVuSansMonoBold';
+	src: url('/resources/fonts/DejaVuSansMono-Bold.eot');
+	src: local('DejaVu Sans Mono Bold'), local('DejaVuSansMono-Bold'), url('/resources/fonts/DejaVuSansMono-Bold.ttf') format('truetype');
+}
+
+@font-face {
+	font-family: 'DejaVuSansMonoBoldOblique';
+	src: url('/resources/fonts/DejaVuSansMono-BoldOblique.eot');
+	src: local('DejaVu Sans Mono Bold Oblique'), local('DejaVuSansMono-BoldOblique'), url('/resources/fonts/DejaVuSansMono-BoldOblique.ttf') format('truetype');
+}
+
+/* @end */
+
 /* @group Reset */
 
 html,body,div,span,applet,object,iframe,h1,h2,h3,h4,h5,h6,p,blockquote,pre,a,abbr,acronym,address,big,cite,code,del,dfn,em,font,img,ins,kbd,q,s,samp,small,strike,strong,sub,sup,tt,var,b,u,i,center,dl,dt,dd,ol,ul,li,fieldset,form,label,legend,table,caption,tbody,tfoot,thead,tr,th,td{margin:0;padding:0;border:0;outline:0;font-size:100%;vertical-align:baseline;background:transparent}body{line-height:1}ol,ul{list-style:none}blockquote,q{quotes:none}blockquote:before,blockquote:after,q:before,q:after{content:'';content:none}:focus{outline:0}ins{text-decoration:none}del{text-decoration:line-through}table{border-collapse:collapse;border-spacing:0}.clear {clear: both;display: block;overflow: hidden;visibility: hidden;width: 0;height: 0;}.clearfix:after {clear: both;content: ' ';display: block;font-size: 0;line-height: 0;visibility: hidden;width: 0;height: 0;}* html .clearfix {height: 1%;}
@@ -79,6 +138,9 @@ h1, h2, h3, h4, h5, h6 {
 	font-family: 'ColaborateLightRegular', 'Helvetica Neue', Arial, 'Liberation Sans', FreeSans, sans-serif;
 	font-weight: normal;
 }
+	h1.thin, h2.thin, h3.thin, h4.thin, h5.thin, h6.thin {
+		font-family: 'Colaborate-ThinRegular', 'Helvetica Neue', Arial, 'Liberation Sans', FreeSans, sans-serif;
+	}
 
 h1 {
 	font-size: 25px;
@@ -102,65 +164,6 @@ h5 {
 
 h6 {
 	font-size: 15px;
-}
-
-/* @end */
-
-/* @group @font-face */
-
-@font-face {
-	font-family: 'Colaborate-ThinRegular';
-	src: url('/resources/fonts/ColabThi.eot');
-	src: local('Colaborate-Thin Regular'), local('Colaborate-Thin'), url('/resources/fonts/ColabThi.ttf') format('truetype');
-}
-
-@font-face {
-	font-family: 'ColaborateLightRegular';
-	src: url('/resources/fonts/ColabLig.eot');
-	src: local('ColaborateLight Regular'), local('Colaborate-Light'), url('/resources/fonts/ColabLig.ttf') format('truetype');
-}
-
-@font-face {
-	font-family: 'Colaborate-RegularRegular';
-	src: url('/resources/fonts/ColabReg.eot');
-	src: local('Colaborate-Regular Regular'), local('Colaborate-Regular'), url('/resources/fonts/ColabReg.ttf') format('truetype');
-}
-
-@font-face {
-	font-family: 'Colaborate-MediumRegular';
-	src: url('/resources/fonts/ColabMed.eot');
-	src: local('Colaborate-Medium Regular'), local('Colaborate-Medium'), url('/resources/fonts/ColabMed.ttf') format('truetype');
-}
-
-@font-face {
-	font-family: 'Colaborate-BoldRegular';
-	src: url('/resources/fonts/ColabBol.eot');
-	src: local('Colaborate-Bold Regular'), local('Colaborate-Bold'), url('/resources/fonts/ColabBol.ttf') format('truetype');
-}
-
-
-@font-face {
-	font-family: 'DejaVuSansMonoBook';
-	src: url('/resources/fonts/DejaVuSansMono.eot');
-	src: local('DejaVu Sans Mono Book'), local('DejaVuSansMono'), url('/resources/fonts/DejaVuSansMono.ttf') format('truetype');
-}
-
-@font-face {
-	font-family: 'DejaVuSansMonoOblique';
-	src: url('/resources/fonts/DejaVuSansMono-Oblique.eot');
-	src: local('DejaVu Sans Mono Oblique'), local('DejaVuSansMono-Oblique'), url('/resources/fonts/DejaVuSansMono-Oblique.ttf') format('truetype');
-}
-
-@font-face {
-	font-family: 'DejaVuSansMonoBold';
-	src: url('/resources/fonts/DejaVuSansMono-Bold.eot');
-	src: local('DejaVu Sans Mono Bold'), local('DejaVuSansMono-Bold'), url('/resources/fonts/DejaVuSansMono-Bold.ttf') format('truetype');
-}
-
-@font-face {
-	font-family: 'DejaVuSansMonoBoldOblique';
-	src: url('/resources/fonts/DejaVuSansMono-BoldOblique.eot');
-	src: local('DejaVu Sans Mono Bold Oblique'), local('DejaVuSansMono-BoldOblique'), url('/resources/fonts/DejaVuSansMono-BoldOblique.ttf') format('truetype');
 }
 
 /* @end */
@@ -478,4 +481,52 @@ blockquote {
 	}
 
 /* @end */
+
+/* @group #about */
+
+#about {
+	width: 454px;
+	height: 210px;
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	margin-top: -105px;
+	margin-left: -228px;
+}
+	#about .info {
+		
+	}
+
+/* @group #about dl */
+
+#about dl {
+		
+	}
+		#about dl dt {
+			color: #bbb;
+			float: left;
+			margin-right: 5px;
+			width: 50px;
+			text-align: right;
+		}
+		#about dl dt a {
+			color: #bbb;
+		}
+		#about dl dd {
+			color: #bbb;
+			margin-left: 55px;
+		}
+
+/* @end */
+
+/* @end */
+
+
+
+
+
+
+
+
+
 
