@@ -1,0 +1,481 @@
+/* @override http://new.jimeh.meh/stylesheets/master.css */
+
+/* @group Reset */
+
+html,body,div,span,applet,object,iframe,h1,h2,h3,h4,h5,h6,p,blockquote,pre,a,abbr,acronym,address,big,cite,code,del,dfn,em,font,img,ins,kbd,q,s,samp,small,strike,strong,sub,sup,tt,var,b,u,i,center,dl,dt,dd,ol,ul,li,fieldset,form,label,legend,table,caption,tbody,tfoot,thead,tr,th,td{margin:0;padding:0;border:0;outline:0;font-size:100%;vertical-align:baseline;background:transparent}body{line-height:1}ol,ul{list-style:none}blockquote,q{quotes:none}blockquote:before,blockquote:after,q:before,q:after{content:'';content:none}:focus{outline:0}ins{text-decoration:none}del{text-decoration:line-through}table{border-collapse:collapse;border-spacing:0}.clear {clear: both;display: block;overflow: hidden;visibility: hidden;width: 0;height: 0;}.clearfix:after {clear: both;content: ' ';display: block;font-size: 0;line-height: 0;visibility: hidden;width: 0;height: 0;}* html .clearfix {height: 1%;}
+
+/* @end */
+
+/* @group Basic HTML */
+
+body {
+	background: #fff;
+	font: 15px/1.5 'Colaborate-ThinRegular', 'Helvetica Neue', Arial, 'Liberation Sans', FreeSans, sans-serif;
+}
+
+a {
+	color: #1193F6;
+	text-decoration: none;
+}
+	a:hover {
+		border-bottom: 1px dotted;
+	}
+
+b, strong {
+	font-family: 'Colaborate-RegularRegular', 'Helvetica Neue', Arial, 'Liberation Sans', FreeSans, sans-serif;
+	font-weight: normal;
+}
+
+li p, li ul {
+	margin-bottom: 0px;
+}
+
+hr {
+	border: 0 #ccc solid;
+	border-top-width: 1px;
+	clear: both;
+	height: 0;
+}
+
+/* @end */
+
+/* @group Spacing */
+
+ol {
+	list-style: decimal;
+}
+
+ul {
+	list-style: disc;
+}
+
+li {
+	margin-left: 30px;
+}
+
+p,
+dl,
+hr,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+ol,
+ul,
+pre,
+table,
+address,
+fieldset {
+	margin-bottom: 20px;
+}
+
+/* @end */
+
+/* @group Headings */
+
+h1, h2, h3, h4, h5, h6 {
+	font-family: 'ColaborateLightRegular', 'Helvetica Neue', Arial, 'Liberation Sans', FreeSans, sans-serif;
+	font-weight: normal;
+}
+
+h1 {
+	font-size: 25px;
+}
+
+h2 {
+	font-size: 23px;
+}
+
+h3 {
+	font-size: 21px;
+}
+
+h4 {
+	font-size: 19px;
+}
+
+h5 {
+	font-size: 17px;
+}
+
+h6 {
+	font-size: 15px;
+}
+
+/* @end */
+
+/* @group @font-face */
+
+@font-face {
+	font-family: 'Colaborate-ThinRegular';
+	src: url('/resources/fonts/ColabThi.eot');
+	src: local('Colaborate-Thin Regular'), local('Colaborate-Thin'), url('/resources/fonts/ColabThi.ttf') format('truetype');
+}
+
+@font-face {
+	font-family: 'ColaborateLightRegular';
+	src: url('/resources/fonts/ColabLig.eot');
+	src: local('ColaborateLight Regular'), local('Colaborate-Light'), url('/resources/fonts/ColabLig.ttf') format('truetype');
+}
+
+@font-face {
+	font-family: 'Colaborate-RegularRegular';
+	src: url('/resources/fonts/ColabReg.eot');
+	src: local('Colaborate-Regular Regular'), local('Colaborate-Regular'), url('/resources/fonts/ColabReg.ttf') format('truetype');
+}
+
+@font-face {
+	font-family: 'Colaborate-MediumRegular';
+	src: url('/resources/fonts/ColabMed.eot');
+	src: local('Colaborate-Medium Regular'), local('Colaborate-Medium'), url('/resources/fonts/ColabMed.ttf') format('truetype');
+}
+
+@font-face {
+	font-family: 'Colaborate-BoldRegular';
+	src: url('/resources/fonts/ColabBol.eot');
+	src: local('Colaborate-Bold Regular'), local('Colaborate-Bold'), url('/resources/fonts/ColabBol.ttf') format('truetype');
+}
+
+
+@font-face {
+	font-family: 'DejaVuSansMonoBook';
+	src: url('/resources/fonts/DejaVuSansMono.eot');
+	src: local('DejaVu Sans Mono Book'), local('DejaVuSansMono'), url('/resources/fonts/DejaVuSansMono.ttf') format('truetype');
+}
+
+@font-face {
+	font-family: 'DejaVuSansMonoOblique';
+	src: url('/resources/fonts/DejaVuSansMono-Oblique.eot');
+	src: local('DejaVu Sans Mono Oblique'), local('DejaVuSansMono-Oblique'), url('/resources/fonts/DejaVuSansMono-Oblique.ttf') format('truetype');
+}
+
+@font-face {
+	font-family: 'DejaVuSansMonoBold';
+	src: url('/resources/fonts/DejaVuSansMono-Bold.eot');
+	src: local('DejaVu Sans Mono Bold'), local('DejaVuSansMono-Bold'), url('/resources/fonts/DejaVuSansMono-Bold.ttf') format('truetype');
+}
+
+@font-face {
+	font-family: 'DejaVuSansMonoBoldOblique';
+	src: url('/resources/fonts/DejaVuSansMono-BoldOblique.eot');
+	src: local('DejaVu Sans Mono Bold Oblique'), local('DejaVuSansMono-BoldOblique'), url('/resources/fonts/DejaVuSansMono-BoldOblique.ttf') format('truetype');
+}
+
+/* @end */
+
+/* @group Code Highlighting */
+
+.c { color: #999988; font-style: italic } /* Comment */
+.err { color: #a61717; background-color: #e3d2d2 } /* Error */
+.k { color: #000000; font-weight: bold } /* Keyword */
+.o { color: #000000; font-weight: bold } /* Operator */
+.cm { color: #999988; font-style: italic } /* Comment.Multiline */
+.cp { color: #999999; font-weight: bold } /* Comment.Preproc */
+.c1 { color: #999988; font-style: italic } /* Comment.Single */
+.cs { color: #999999; font-weight: bold; font-style: italic } /* Comment.Special */
+.gd { color: #000000; background-color: #ffdddd } /* Generic.Deleted */
+.gd .x { color: #000000; background-color: #ffaaaa } /* Generic.Deleted.Specific */
+.ge { color: #000000; font-style: italic } /* Generic.Emph */
+.gr { color: #aa0000 } /* Generic.Error */
+.gh { color: #999999 } /* Generic.Heading */
+.gi { color: #000000; background-color: #ddffdd } /* Generic.Inserted */
+.gi .x { color: #000000; background-color: #aaffaa } /* Generic.Inserted.Specific */
+.go { color: #888888 } /* Generic.Output */
+.gp { color: #555555 } /* Generic.Prompt */
+.gs { font-weight: bold } /* Generic.Strong */
+.gu { color: #aaaaaa } /* Generic.Subheading */
+.gt { color: #aa0000 } /* Generic.Traceback */
+.kc { color: #000000; font-weight: bold } /* Keyword.Constant */
+.kd { color: #000000; font-weight: bold } /* Keyword.Declaration */
+.kp { color: #000000; font-weight: bold } /* Keyword.Pseudo */
+.kr { color: #000000; font-weight: bold } /* Keyword.Reserved */
+.kt { color: #445588; font-weight: bold } /* Keyword.Type */
+.m { color: #009999 } /* Literal.Number */
+.s { color: #d14 } /* Literal.String */
+.na { color: #008080 } /* Name.Attribute */
+.nb { color: #0086B3 } /* Name.Builtin */
+.nc { color: #445588; font-weight: bold } /* Name.Class */
+.no { color: #008080 } /* Name.Constant */
+.ni { color: #800080 } /* Name.Entity */
+.ne { color: #990000; font-weight: bold } /* Name.Exception */
+.nf { color: #990000; font-weight: bold } /* Name.Function */
+.nn { color: #555555 } /* Name.Namespace */
+.nt { color: #000080 } /* Name.Tag */
+.nv { color: #008080 } /* Name.Variable */
+.ow { color: #000000; font-weight: bold } /* Operator.Word */
+.w { color: #bbbbbb } /* Text.Whitespace */
+.mf { color: #009999 } /* Literal.Number.Float */
+.mh { color: #009999 } /* Literal.Number.Hex */
+.mi { color: #009999 } /* Literal.Number.Integer */
+.mo { color: #009999 } /* Literal.Number.Oct */
+.sb { color: #d14 } /* Literal.String.Backtick */
+.sc { color: #d14 } /* Literal.String.Char */
+.sd { color: #d14 } /* Literal.String.Doc */
+.s2 { color: #d14 } /* Literal.String.Double */
+.se { color: #d14 } /* Literal.String.Escape */
+.sh { color: #d14 } /* Literal.String.Heredoc */
+.si { color: #d14 } /* Literal.String.Interpol */
+.sx { color: #d14 } /* Literal.String.Other */
+.sr { color: #009926 } /* Literal.String.Regex */
+.s1 { color: #d14 } /* Literal.String.Single */
+.ss { color: #990073 } /* Literal.String.Symbol */
+.bp { color: #999999 } /* Name.Builtin.Pseudo */
+.vc { color: #008080 } /* Name.Variable.Class */
+.vg { color: #008080 } /* Name.Variable.Global */
+.vi { color: #008080 } /* Name.Variable.Instance */
+.il { color: #009999 } /* Literal.Number.Integer.Long */
+
+/* @end */
+
+/* @group ::-webkit-scrollbar */
+
+/*::-webkit-scrollbar {
+    width: 6px;
+    height: 6px;
+}*/
+
+/*::-webkit-scrollbar-button:start:decrement,
+::-webkit-scrollbar-button:end:increment {
+    display: block;
+    height: 10px;
+}*/
+
+/*::-webkit-scrollbar-button:vertical:increment {
+    background-color: #fff;
+}*/
+
+/*::-webkit-scrollbar-track-piece {
+    background-color: #eee;
+    -webkit-border-radius: 3px;
+}*/
+
+/*::-webkit-scrollbar-thumb:vertical {
+    height: 50px;
+    background-color: #ccc;
+    -webkit-border-radius: 3px;
+}*/
+
+/*::-webkit-scrollbar-thumb:horizontal {
+    width: 50px;
+    background-color: #ccc;
+    -webkit-border-radius: 3px;
+}*/
+
+/* @end */
+
+/* @group Main Element IDs */
+
+#universe {
+	margin: 0px auto;
+	width: 980px;
+}
+
+
+#header {
+	
+}
+
+#title {
+	float: left;
+}
+
+/* @group #navigation */
+
+#navigation {
+	font-size: 15px;
+	float: right;
+	margin: 20px 0px 20px 0px;
+}
+	#navigation a {
+		color: #939393;
+		margin: 0px 15px;
+		text-decoration: none;
+	}
+		#navigation a:hover {
+			border: none;
+			text-decoration: none;
+		}
+		#navigation a.selected {
+			color: #1193F6;
+		}
+
+/* @end */
+
+/* @end */
+
+/* @group Code Blocks */
+
+code, pre, .gist, .gist-data, .gist-meta {
+	font-family: 'DejaVuSansMonoBook', Menlo, "Courier New" !important;
+	font-size: 12px !important;
+}
+
+/* @group pre, code */
+
+	pre, code {
+		background-color: #f8f8ff;
+		border: 1px solid #dedede;
+		padding: 1px 3px;
+	}
+	pre {
+		padding: 0.25em 0.5em;
+		margin-left: 20px;
+		margin-right: 20px;
+	}
+		pre code {
+			background-color: none;
+			border: none;
+			padding: 0px;
+		}
+
+/* @end */
+
+/* @group .gist */
+
+.gist {
+	position: relative;
+	margin-bottom: 20px !important;
+	margin-left: 20px;
+	margin-right: 20px;
+}
+	.gist a:hover {
+		border-bottom: none !important;
+		text-decoration: underline !important;
+	}
+	.gist-data {
+		border-bottom: none !important;
+	}
+	.gist-meta {
+		font-size: 11px !important;
+		position: absolute;
+		left: 0px;
+		bottom: -27px;
+		right: 0px;
+		display: none;
+	}
+	.gist:hover .gist-meta {
+		border: 1px solid #dedede;
+		display: block;
+	}
+
+/* @end */
+
+/* @end */
+
+/* @group blockquote */
+
+blockquote {
+	font-family: Georgia, 'Times New Roman', Times;
+	font-style: italic;
+	font-size: 42px;
+	line-height: 0.3em;
+	margin: 0px 20px;
+}
+	blockquote p {
+		font-size: 14px;
+		line-height: 1.4;
+	}
+	blockquote b, blockquote strong {
+		font-family: Georgia, 'Times New Roman', Times;
+		font-style: italic;
+		font-weight: bold;
+		font-size: 14px;
+		line-height: 1.4;
+	}
+	blockquote:before {
+		color: #e6e6e6;
+		content: '“';
+		float: left;
+		padding-top: 10px;
+		padding-right: 10px;
+		margin-left: -28px;
+	}
+
+/* @end */
+
+/* @group .post-* */
+
+.post-world {
+	margin: 0px 50px;
+}
+
+.post-item {
+	margin-bottom: 80px;
+}
+
+/* @group .post-title */
+
+.post-title {
+	
+}
+	.post-title a {
+		color: #000;
+	}
+
+/* @end */
+
+/* @group .post-meta */
+
+.post-meta {
+	float: left;
+	width: 40px;
+	margin-top: -5px;
+	margin-left: -50px;
+	border-right: 1px solid #E6E6E6;
+}
+	.post-meta p {
+		margin: 0px;
+	}
+	.post-meta .date {
+		color: #cdcdcd;
+		text-align: center;
+		line-height: 1.1em;
+		margin: 8px 0px 5px 0px;
+	}
+		.post-meta .date i {
+			font-style: normal;
+			font-size: 24px;
+			display: block;
+		}
+		.post-meta .date b {
+			font-family: 'ColaborateLightRegular', 'Helvetica Neue', Arial, 'Liberation Sans', FreeSans, sans-serif;
+			font-weight: normal;
+			font-size: 14px;
+			display: block;
+		}
+
+/* @end */
+
+.post-comments {
+	margin-top: 25px;
+	padding-top: 8px;
+	border-top: 1px solid #ccc;
+}
+
+/* @group .post-comment-link */
+
+.post-comment-link {
+	
+}
+	.post-comment-link a {
+		color: #939393;
+	}
+
+/* @end */
+
+/* @end */
+
+/* @group #disqus_thread */
+
+#disqus_thread {
+	font-family: 'Helvetica Neue', Arial, 'Liberation Sans', FreeSans, sans-serif;
+}
+	#disqus_thread h3 {
+		font-family: 'ColaborateLightRegular';
+		font-size: 20px;
+	}
+
+/* @end */
+
