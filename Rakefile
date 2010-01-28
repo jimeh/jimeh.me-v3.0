@@ -38,6 +38,11 @@ namespace :deploy do
   task :reset do
     rsync ["public/", "assets/"], "#{$user}@#{$server}:#{$path}", ["--delete"]
   end
+  
+  task :clean do
+    system "ssh #{$user}@#{$server} 'cd \"#{$path}\" && rm -rf ./* && rm -rf ./.*'"
+    rsync ["public/", "assets/"], "#{$user}@#{$server}:#{$path}"
+  end
 end
 
 def rsync(source, dest, options = [])
