@@ -5,11 +5,11 @@ $path = "#{$server}/public"
 
 task :clean do
   system "rm -rf ./public"
-  system "jekyll ./source ./public"
+  system "jekyll"
 end
 
 task :build do
-  system "jekyll ./source ./public"
+  system "jekyll"
 end
 
 task :assets do
@@ -17,7 +17,7 @@ task :assets do
 end
 
 task :server do
-  system "jekyll ./source ./public --server --auto"
+  system "jekyll --server --auto"
 end
 
 task :deploy => "deploy:site"

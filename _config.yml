@@ -1,0 +1,8 @@
+auto: false
+source: source
+destination: public
+markdown: rdiscount
+# paginate: 10
+pygments: true
+lsi: false
+permalink: /blog/:year/:month/:day/:title
