@@ -1,0 +1,7 @@
+auto: false
+destination: ../../public/blog
+markdown: rdiscount
+permalink: pretty
+paginate: 2
+pygments: true
+lsi: false

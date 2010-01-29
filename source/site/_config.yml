@@ -1,0 +1,6 @@
+auto: false
+destination: ../../public
+markdown: rdiscount
+permalink: pretty
+pygments: true
+lsi: false

@@ -1,0 +1,54 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+	"http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+
+	<title>{{ page.title }}</title>
+	<meta name="author" content="Jim Myhrberg" />
+   <link href="http://jimeh.me/blog/atom.xml" rel="alternate" title="jimeh.me" type="application/atom+xml" />
+	
+	<link rel="stylesheet" href="/stylesheets/master.css" type="text/css" media="screen" title="no title" charset="utf-8" />
+	
+</head>
+
+<body>
+
+<div id="universe">
+	
+	<div id="header">
+		<div id="title">
+			<a href="/blog/">blog</a>
+		</div>
+		<div id="navigation">
+			<a href="/">about</a>
+			<a href="/blog/" class="selected">blog</a>
+		</div>
+		<div class="clear"></div>
+	</div>
+	
+	<div class="post-world">
+		{{ content }}
+	</div>
+	
+	<div class="post-paginator">
+		{% if paginator.total_pages > paginator.page %}
+			<a href="/blog/page{{ paginator.next_page }}/" class="older">&larr; older</a>
+		{% endif %}
+		{% if paginator.page > 1 %}
+			{% if paginator.previous_page == 1 %}
+				<a href="/blog/" class="newer">newer &rarr;</a>
+			{% else %}
+				<a href="/blog/page{{ paginator.previous_page }}" class="newer">newer &rarr;</a>
+			{% endif %}
+		{% endif %}
+		<a href="/blog/archive/">archive</a>
+	</div>
+	
+</div>
+
+{% include disqus_load.html %}
+
+</body>
+</html>

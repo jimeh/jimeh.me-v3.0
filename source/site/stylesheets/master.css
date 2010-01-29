@@ -1,3 +1,4 @@
+/* @override http://new.jimeh.meh/stylesheets/master.css */
 
 /* @group @font-face */
 
@@ -478,7 +479,50 @@ blockquote {
 
 /* @end */
 
+/* @group .post-paginator */
+
+.post-paginator {
+	text-align: center;
+	position: relative;
+	width: 860px;
+	margin: 0px auto 20px auto;
+}
+	.post-paginator .older {
+		position: absolute;
+		left: 0px;
+	}
+	.post-paginator .newer {
+		position: absolute;
+		right: 0px;
+	}
+
 /* @end */
+
+/* @end */
+
+.archive-list {
+	width: 500px;
+	margin: 0px auto;
+}
+	.archive-list ul {
+		list-style: none;
+	}
+	.archive-list h1 {
+		text-align: center;
+	}
+	.archive-list li {
+		margin: 0px;
+	}
+		.archive-list li .title {
+			
+		}
+		.archive-list li .date {
+			color: #ddd;
+			width: 80px;
+			float: left;
+			text-align: right;
+			padding-right: 5px;
+		}
 
 /* @group #disqus_thread */
 

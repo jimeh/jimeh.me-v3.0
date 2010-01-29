@@ -5,20 +5,20 @@ $path = "#{$server}/public"
 
 task :clean do
   system "rm -rf ./public"
-  system "jekyll"
+  build
 end
 
 task :build do
-  system "jekyll"
+  build
 end
 
 task :assets do
   rsync "assets/", "public/"
 end
 
-task :server do
-  system "jekyll --server --auto"
-end
+# task :server do
+#   system "jekyll --server --auto"
+# end
 
 task :deploy => "deploy:site"
 
@@ -43,6 +43,11 @@ namespace :deploy do
     system "ssh #{$user}@#{$server} 'cd \"#{$path}\" && rm -rf ./* && rm -rf ./.*'"
     rsync ["public/", "assets/"], "#{$user}@#{$server}:#{$path}"
   end
+end
+
+def build
+  system "jekyll ./source/site ./public"
+  system "jekyll ./source/blog ./public/blog"
 end
 
 def rsync(source, dest, options = [])
