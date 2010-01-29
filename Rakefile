@@ -1,7 +1,16 @@
 
+#
+# Config
+#
+
 $server = "new.jimeh.me"
 $user = "jimeh"
 $path = "#{$server}/public"
+
+
+#
+# Build tasks
+#
 
 task :clean do
   system "rm -rf ./public"
@@ -16,9 +25,26 @@ task :assets do
   rsync "assets/", "public/"
 end
 
-# task :server do
-#   system "jekyll --server --auto"
-# end
+
+#
+# Server tasks
+#
+
+task :server => "server:site"
+
+namespace :server do
+  task :site do
+    system "jekyll source/site public --server --auto"
+  end
+  task :blog do
+    system "jekyll source/blog public/blog --server --auto"
+  end
+end
+
+
+#
+# Deploy tasks
+#
 
 task :deploy => "deploy:site"
 
@@ -26,24 +52,25 @@ namespace :deploy do
   task :site do
     rsync "public/", "#{$user}@#{$server}:#{$path}"
   end
-  
   task :assets do
     rsync "assets/", "#{$user}@#{$server}:#{$path}"
   end
-  
   task :all do
     rsync ["public/", "assets/"], "#{$user}@#{$server}:#{$path}"
   end
-  
   task :reset do
     rsync ["public/", "assets/"], "#{$user}@#{$server}:#{$path}", ["--delete"]
   end
-  
   task :clean do
     system "ssh #{$user}@#{$server} 'cd \"#{$path}\" && rm -rf ./* && rm -rf ./.*'"
     rsync ["public/", "assets/"], "#{$user}@#{$server}:#{$path}"
   end
 end
+
+
+#
+# Helper methods
+#
 
 def build
   system "jekyll ./source/site ./public"
@@ -59,3 +86,4 @@ def rsync(source, dest, options = [])
   options << "--exclude='.git*'"
   system "rsync -vr #{options.join(" ")} #{source} #{dest}"
 end
+
