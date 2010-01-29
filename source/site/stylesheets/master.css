@@ -1,4 +1,3 @@
-/* @override http://new.jimeh.meh/stylesheets/master.css */
 
 /* @group @font-face */
 
@@ -277,7 +276,7 @@ h6 {
 
 
 #header {
-	
+	height: 100px;
 }
 
 #title {
@@ -433,6 +432,10 @@ blockquote {
 
 /* @end */
 
+.post-content {
+
+}
+
 /* @group .post-meta */
 
 .post-meta {
@@ -485,7 +488,7 @@ blockquote {
 	text-align: center;
 	position: relative;
 	width: 860px;
-	margin: 0px auto 20px auto;
+	margin: 0px auto 70px auto;
 }
 	.post-paginator .older {
 		position: absolute;
@@ -500,6 +503,8 @@ blockquote {
 
 /* @end */
 
+/* @group .archive-list */
+
 .archive-list {
 	width: 500px;
 	margin: 0px auto;
@@ -510,7 +515,10 @@ blockquote {
 	.archive-list h1 {
 		text-align: center;
 	}
-	.archive-list li {
+
+/* @group .archive-list li */
+
+.archive-list li {
 		margin: 0px;
 	}
 		.archive-list li .title {
@@ -523,6 +531,10 @@ blockquote {
 			text-align: right;
 			padding-right: 5px;
 		}
+
+/* @end */
+
+/* @end */
 
 /* @group #disqus_thread */
 
