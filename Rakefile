@@ -5,7 +5,7 @@
 
 $server = "new.jimeh.me"
 $user = "jimeh"
-$path = "#{$server}/public"
+$path = "jimeh.me/new"
 
 
 #
