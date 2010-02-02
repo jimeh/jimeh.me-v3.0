@@ -12,10 +12,12 @@ $path = "jimeh.me/new"
 # Build tasks
 #
 
-task :clean do
+task :reset do
   system "rm -rf ./public"
   build
 end
+
+task :clean => :reset
 
 task :build do
   build
@@ -58,10 +60,10 @@ namespace :deploy do
   task :all do
     rsync ["public/", "assets/"], "#{$user}@#{$server}:#{$path}"
   end
-  task :reset do
+  task :clean do
     rsync ["public/", "assets/"], "#{$user}@#{$server}:#{$path}", ["--delete"]
   end
-  task :clean do
+  task :reset do
     system "ssh #{$user}@#{$server} 'cd \"#{$path}\" && rm -rf ./* && rm -rf ./.*'"
     rsync ["public/", "assets/"], "#{$user}@#{$server}:#{$path}"
   end
