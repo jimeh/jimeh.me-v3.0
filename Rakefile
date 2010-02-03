@@ -3,9 +3,9 @@
 # Config
 #
 
-$server = "new.jimeh.me"
+$server = "jimeh.me"
 $user = "jimeh"
-$path = "jimeh.me/new"
+$path = "jimeh.me/www"
 
 
 #
