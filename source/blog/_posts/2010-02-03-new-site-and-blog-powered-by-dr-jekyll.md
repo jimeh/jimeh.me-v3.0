@@ -10,7 +10,7 @@ For archival reasons I've made the [previous][v1] [versions][v2] of my site avai
 On an unrelated note, it happens to be my 24th birthday today, I haven't decided yet if that's a good or a bad thing. But at least I found time to push up my new site today, so I guess that's a good start at least :)
 
 
-### Powered by Dr. Jekyll?
+## Powered by Dr. Jekyll?
 
 My personal site has always been a **very** simple site. In the past it's just been a single HTML page which I've coded by hand and uploaded via SFTP. It's a simple process, and decently straight forward. This time however, I wanted to incorporate a blog as well. My first choice was [WordPress][], as I've used it on my [previous][zydev] blog. But it's overkill for what I need, and keept getting hacked all the fucking time even when I was keeping WordPress decently up to date.
 
@@ -19,12 +19,12 @@ So I'm using [Jekyll][] this time around. Jekyll is a small website framework wr
 I'll soon write a more in-depth article about Jekyll and how I'm using it.
 
 
-### Comments with Disqus
+## Comments with Disqus
 
 Since I'm using static HTML files, I'm left with only a few — but awesome — solutions to have a commenting feature on the blog. Both [Disqus][] and [Intense Debate][idebate] have great Javascript-based commenting systems which work for static HTML sites. My favorite of the two is Disqus.
 
 
-### Deployment with Rake+Rsync
+## Deployment with Rake+Rsync
 
 I've also opted for a much easier way to deploy to the live server once I'm done with changes locally. Namely, Ruby's Make program, *Rake*.
 
@@ -33,12 +33,12 @@ I've written a couple of custom rake tasks which run Jekyll to build the static 
 I get butterflies in my stomach whenever I think about how neat it is.
 
 
-### Source Code Management with Git
+## Source Code Management with Git
 
 After being an avid user of [Subversion][svn] for about 5 years, I switched permanently to [Git][] last August when I spent 4 hours reading a PDF I had with me on holiday. So I'm obviously using Git for this site, and the source code is [available][repo] on GitHub in all it's glory.
 
 
-### Design
+## Design
 
 I really focused on minimalism, to the point I'm not using a single image, but rather only text on a white background. This is a first for me, as I generally like to have nice rounded corners, or drop shadows, or something, but still simple and elegant looking.
 
@@ -47,7 +47,7 @@ Since the design in highly text-focussed, good typography was a must right from 
 The two fonts I'm using are [Colaborate][] for body text, and [DejaVu Sans Mono][dejavu] for fixed width text and code examples. I got both from [Font Squirrel][fontsquirrel]'s excellent [@font-face fontkit][ffkits] page which has hundreds of free and ready to use kits.
 
 
-### The End
+## The End
 
 > {insert [yo mamma joke][yomama] here}. Have a nice day.
 
