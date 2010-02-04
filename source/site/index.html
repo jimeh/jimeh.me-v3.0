@@ -18,22 +18,26 @@ title: jimeh / about
 		"<n uers=\"znvygb:pbagnpg\100wvzru\056zr\">pbagnpg\100wvzru\056zr<\057n>".replace(/[a-zA-Z]/g, function(c){return String.fromCharCode((c<="Z"?90:122)>=(c=c.charCodeAt(0)+13)?c:c-26);}));
 		</script></td>
 			<td class="label">vcard</td>
-			<td><a href="/vcard">download</a></td>
-			<td class="label"><a href="/resume/">resume</a></dt>
-			<td><a href="/resume/jim-myhrberg-resume.pdf">pdf</a> / <a href="/resume/jim-myhrberg-resume.doc">doc</a></td>
+			<td><a href="/vcard" onclick="_gaq.push(['_trackEvent', 'download', 'vcard', '.vcf']);">download</a></td>
+			<td class="label"><a href="/resume/">resume</a>
+			<td>
+				<a href="/resume/jim-myhrberg-resume.pdf" onclick="_gaq.push(['_trackEvent', 'download', 'resume', '.doc']);">pdf</a> /
+				<a href="/resume/jim-myhrberg-resume.doc" onclick="_gaq.push(['_trackEvent', 'download', 'resume', '.doc']);">doc</a>
+			</td>
 		</tr>
 		<tr>
-			<td class="label"><a href="http://www.google.com/search?q=jimeh%20%22Jim%20Myhrberg%22">misc.</a></td>
+			<td class="label">
+				<a href="http://www.google.com/search?q=jimeh%20%22Jim%20Myhrberg%22" onclick="_gaq.push(['_trackEvent', 'linkTo', 'google', this.href]);">misc.</a>
+			</td>
 			<td colspan="5">
-				<a href="http://twitter.com/jimeh">twitter</a>,
-				<a href="http://github.com/jimeh">github</a>,
-				<a href="http://www.facebook.com/jimeh">facebook</a>,
-				<a href="http://www.linkedin.com/in/jimmyhrberg">linkedin</a>,
-				<a href="http://www.flickr.com/photos/jimeh/">flickr</a>,
-				<a href="http://www.last.fm/user/jimeh">last.fm</a>,
-				<a href="http://delicious.com/jimeh">del.icio.us</a>,
-				<a href="http://jimeh.deviantart.com">deviantart</a>
-				
+				<a href="http://twitter.com/jimeh" onclick="_gaq.push(['_trackEvent', 'linkTo', 'twitter', this.href]);">twitter</a>,
+				<a href="http://github.com/jimeh" onclick="_gaq.push(['_trackEvent', 'linkTo', 'github', this.href]);">github</a>,
+				<a href="http://www.facebook.com/jimeh" onclick="_gaq.push(['_trackEvent', 'linkTo', 'facebook', this.href]);">facebook</a>,
+				<a href="http://www.linkedin.com/in/jimmyhrberg" onclick="_gaq.push(['_trackEvent', 'linkTo', 'linkedin', this.href]);">linkedin</a>,
+				<a href="http://www.flickr.com/photos/jimeh/" onclick="_gaq.push(['_trackEvent', 'linkTo', 'flickr', this.href]);">flickr</a>,
+				<a href="http://www.last.fm/user/jimeh" onclick="_gaq.push(['_trackEvent', 'linkTo', 'last.fm', this.href]);">last.fm</a>,
+				<a href="http://delicious.com/jimeh" onclick="_gaq.push(['_trackEvent', 'linkTo', 'del.icio.us', this.href]);">del.icio.us</a>,
+				<a href="http://jimeh.deviantart.com" onclick="_gaq.push(['_trackEvent', 'linkTo', 'deviantart', this.href]);">deviantart</a>
 			</td>
 		</tr>
 	</table>
