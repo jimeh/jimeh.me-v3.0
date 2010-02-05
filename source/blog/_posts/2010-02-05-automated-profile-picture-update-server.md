@@ -11,7 +11,7 @@ He also didn't like the new profile picture, but that's his problem. My first re
 
 A service which automagically just updates your Facebook, Twitter, Flickr, YouTube, Vimeo, Gravatar, *...* profile pictures would be quite cool. Thinking about it a bit more, there are three problems with building such a service:
 
-* A lot of these sites you will need to crawl programmatically using some kind of web-crawler library. It will be a paid to write, and even bigger pain whenever they change anything in the HTML layout of their pages.
+* A lot of these sites you will need to crawl programmatically using some kind of web-crawler library. It will be a pain to write, and even bigger pain whenever they change anything in the HTML layout of their pages.
 * Some sites have specific and/or strange restrictions for image dimensions, file size, and even file format.
 * Will people actually trust such a service with passwords for all of their online social networking accounts?
 

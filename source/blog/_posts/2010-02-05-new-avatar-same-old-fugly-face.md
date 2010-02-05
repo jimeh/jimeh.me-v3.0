@@ -14,7 +14,7 @@ So without further ado, I present my old and my new avatar in complete Fancybox 
     <a href="http://files.jimeh.me/.blog/jimeh_2.0_large-20100205-042205.jpg" class="fancybox" rel="2010-02-05-avatar"><img src="http://files.jimeh.me/.blog/jimeh_2.0-20100205-034010.png" alt="New Avatar: jimeh 2.0 (2010)" /></a>
 </p>
 
-And because I'm a perfectionist and decent bit insane, here's the 50x50 pixels version too, so you can see how they both look in really small sizes, which is the most common size they appear in on different sites anyway.
+Because I'm a perfectionist and decent bit insane, here's the 50x50 pixel versions too, so you can see how they both look in really small sizes, which is the most common size they appear in on different sites anyway.
 
 <p class="thumbs">
     <a href="http://files.jimeh.me/.blog/jimeh_1.0_large-20100205-042133.jpg" class="fancybox no-title" rel="2010-02-05-avatar-s"><img src="http://files.jimeh.me/.blog/jimeh_1.0_small-20100205-070219.jpg" alt="Old Avatar: jimeh 1.0 (2005)" /></a>
