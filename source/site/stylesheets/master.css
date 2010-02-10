@@ -481,7 +481,7 @@ blockquote {
 /* @group .post-title */
 
 .post-title {
-	
+	position: relative;
 }
 	.post-title a {
 		color: #000;
@@ -489,6 +489,13 @@ blockquote {
 		.post-title a:hover {
 			border-bottom: 1px dotted #ccc !important;
 		}
+	.post-title .author {
+		color: #bbb;
+		font-size: 13px;
+		position: absolute;
+		bottom: -10px;
+		left: 0px;
+	}
 
 /* @end */
 
