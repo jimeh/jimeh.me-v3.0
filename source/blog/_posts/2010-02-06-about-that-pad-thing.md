@@ -17,6 +17,8 @@ Read the [full article][sugipad], please.
 
 Read the [full article][davepad].
 
+**Update 2:** Seems using Jekyll can have some downsides. I accidentally named the file for this post `2010-05-06-[...].md` without noticing that it was labeled as posted “06 May”. I've corrected it, but the permalink to this post has changed. *\*facepalm\**
+
 
 [sugarenia]: http://blog.sugarenia.com/
 [sugipad]: http://blog.sugarenia.com/archives/rantings/saturday-ranting-about-ipad-flash
