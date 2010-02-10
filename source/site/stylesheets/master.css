@@ -502,13 +502,16 @@ blockquote {
 .post-content {
 
 }
+	.post-content p {
+		text-align: justify;
+	}
 
 /* @group .post-meta */
 
 .post-meta {
 	float: left;
 	width: 40px;
-	margin-top: -5px;
+	margin-top: 2px;
 	margin-left: -50px;
 	border-right: 1px solid #E6E6E6;
 }
