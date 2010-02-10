@@ -17,6 +17,8 @@
 		{{ content }}
 	</div>
 	
+	{% include sidebar.html %}
+	
 	<div class="post-paginator">
 		{% if paginator.total_pages > paginator.page %}
 			<a href="/blog/page{{ paginator.next_page }}/" class="older">&larr; older</a>
@@ -28,7 +30,8 @@
 				<a href="/blog/page{{ paginator.previous_page }}" class="newer">newer &rarr;</a>
 			{% endif %}
 		{% endif %}
-		<a href="/blog/archive/">archive</a>
+		<a href="/blog/archive/">archive</a><br />
+		<a href="http://feeds.feedburner.com/jimeh">rss</a>
 	</div>
 	
 </div>

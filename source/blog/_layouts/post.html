@@ -19,7 +19,7 @@
 			    <p class="date">{{ page.date | date: "<i>%d</i><b>%b</b>" }}</p>
 			</div>
 
-			<h1>{{ page.title }}</h1>
+			<h1 class="post-title">{{ page.title }}<span class="author">by Jim Myhrberg</span></h1>
 
 			<div class="post-content">
 				{{ content }}
@@ -31,8 +31,11 @@
 		</div>
 	</div>
 	
+	{% include sidebar.html %}
+	
 	<div class="post-paginator">
-		<a href="/blog/archive/">archive</a>
+		<a href="/blog/archive/">archive</a><br />
+		<a href="http://feeds.feedburner.com/jimeh">rss</a>
 	</div>
 	
 </div>

@@ -109,6 +109,7 @@ ul {
 
 li {
 	margin-left: 30px;
+	margin-right: 10px;
 }
 
 p,
@@ -359,7 +360,7 @@ span.fancybox {
 /* @group Thumbnails */
 
 .thumbs {
-	text-align: center;
+	text-align: center !important;
 }
 	.thumbs a {
 		margin: 5px;
@@ -457,10 +458,20 @@ blockquote {
 
 /* @end */
 
+.sidebar {
+	float: right;
+	width: 270px;
+}
+	.sidebar p {
+		margin-bottom: 8px;
+	}
+
 /* @group .post-* */
 
 .post-world {
-	margin: 0px 50px;
+	margin: 0px 20px 0px 50px;
+	float: left;
+	width: 640px;
 }
 
 .post-item {
@@ -626,6 +637,40 @@ blockquote {
 			#about .info .label a {
 				color: #bbb;
 			}
+
+/* @end */
+
+/* @group .about-me */
+
+.about-me {
+	font-size: 13px;
+}
+	.about-me .avatar {
+		float: left;
+		margin: 0px 10px 10px 0px;
+		cursor: default;
+	}
+		.about-me .avatar img {
+			height: 60px;
+			width: 60px;
+		}
+	.about-me .description {
+		
+	}
+	.about-me dl {
+		color: #bbb;
+	}
+		.about-me dl dt {
+			float: left;
+			text-align: right;
+			width: 60px;
+		}
+			.about-me dl dt a {
+				color: #bbb;
+			}
+		.about-me dl dd {
+			margin-left: 68px;
+		}
 
 /* @end */
 
