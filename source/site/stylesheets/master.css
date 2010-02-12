@@ -689,7 +689,8 @@ blockquote {
 .recent-articles {
 	font-size: 13px;
 }
-	.recent-articles h5 {
+	.recent-articles h2 {
+		font-size: 17px;
 		margin-bottom: 3px;
 		margin-left: 25px;
 	}
