@@ -667,24 +667,42 @@ blockquote {
 	.about-me .description {
 		
 	}
-	.about-me dl {
+	dl.labels {
 		color: #bbb;
 	}
-		.about-me dl dt {
+		dl.labels dt {
 			float: left;
 			text-align: right;
 			width: 60px;
 		}
-			.about-me dl dt a {
+			dl.labels dt a {
 				color: #bbb;
 			}
-		.about-me dl dd {
+		dl.labels dd {
 			margin-left: 68px;
 		}
 
 /* @end */
 
+/* @group .recent-articles */
 
+.recent-articles {
+	font-size: 13px;
+}
+	.recent-articles h5 {
+		margin-bottom: 3px;
+		margin-left: 25px;
+	}
+	.recent-articles ul {
+		color: #ddd;
+		list-style: none;
+	}
+		.recent-articles ul li {
+			margin-left: 10px;
+		}
+	
+
+/* @end */
 
 
 

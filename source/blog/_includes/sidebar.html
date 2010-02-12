@@ -7,7 +7,7 @@
 				I'm a freelance web-developer / designer, and every morning I sprinkle
 				a little bit of insanity over my breakfast bowl of creativity and inspiration.
 			</p>
-			<dl>
+			<dl class="labels">
 				<dt>email</dt>
 				<dd><script type="text/javascript">document.write(
 "<n uers=\"znvygb:pbagnpg\100wvzru\056zr\" bapyvpx=\"_tnd\056chfu(['_genpxRirag', 'yvaxGb', 'rznvy', guvf\056uers]);\">pbagnpg\100wvzru\056zr<\057n>".replace(/[a-zA-Z]/g, function(c){return String.fromCharCode((c<="Z"?90:122)>=(c=c.charCodeAt(0)+13)?c:c-26);}));
@@ -33,6 +33,15 @@
 				</dd>
 			</dl>
 		</div>
+	</div>
+	<div class="recent-articles">
+		<h5>Recent Articles</h5>
+		<dl class="labels">
+			{% for post in site.posts limit:8 %}
+				<dt>{{ post.date | date: "%d %b" }}</dt>
+				<dd><a href="/blog{{ post.url }}" class="title">{{ post.title }}</a></dd>
+			{% endfor %}
+		</dl>
 	</div>
 </div>
 
