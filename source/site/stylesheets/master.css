@@ -475,7 +475,7 @@ blockquote {
 }
 
 .post-item {
-	margin-bottom: 80px;
+	margin-bottom: 100px;
 }
 
 /* @group .post-title */
@@ -654,6 +654,7 @@ blockquote {
 
 .about-me {
 	font-size: 13px;
+	margin-bottom: 30px;
 }
 	.about-me .avatar {
 		float: left;
