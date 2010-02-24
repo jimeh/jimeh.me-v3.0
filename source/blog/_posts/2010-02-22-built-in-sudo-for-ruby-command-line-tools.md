@@ -1,6 +1,7 @@
 ---
 layout: post
 title: Built-in Sudo for Ruby Command-Line Tools
+categories: [technology, ruby, git, gist]
 ---
 
 I was looking through [my gists][gists] today on GitHub, and decided I'd do a couple of posts on some of the pieces of code I've put up there. The first of which is the `sudome` Ruby method.

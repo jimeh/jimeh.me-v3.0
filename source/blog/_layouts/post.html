@@ -21,7 +21,10 @@
 
 			<h1 class="post-title">
 				{{ page.title }}
-				<span class="author">by Jim Myhrberg</span>
+				<div class="post-title-sub">
+					by Jim Myhrberg – tags:
+					{% for tag in page.categories %} <a href="/blog/tag/{{tag}}" rel="tag"><i class="hash">#</i>{{tag}}</a>{% if forloop.last != true %},{% endif %}{% endfor %}
+				</div>
 			</h1>
 
 			<div class="post-content">

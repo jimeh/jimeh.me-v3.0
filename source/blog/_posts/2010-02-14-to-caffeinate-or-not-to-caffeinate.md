@@ -1,6 +1,7 @@
 ---
 layout: post
 title: To Caffeinate, Or Not To Caffeinate?
+categories: [personal, productivity]
 ---
 
 I used to be a caffeine junkie. My caffeinated poison of choice was Coke, the <a href="http://files.jimeh.me/.blog/legal-coke-20100213-224302.png" class="fancybox" title="I look more like the ad...or, uhmm, used to.....">legal</a> kind, not the <a href="http://files.jimeh.me/.blog/illegal-coke-20100213-224557.png" class="fancybox">illegal</a> one.

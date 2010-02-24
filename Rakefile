@@ -1,12 +1,40 @@
+$: << File.expand_path(File.join(File.dirname(__FILE__), "lib"))
+
+require 'fileutils'
 
 #
 # Config
 #
 
-$server = "jimeh.me"
-$user = "jimeh"
-$path = "jimeh.me/www"
+SERVER = "jimeh.me"
+USER   = "jimeh"
 
+REMOTE_PATH  = "jimeh.me/www"
+RSYNC_TARGET = "#{USER}@#{SERVER}:#{REMOTE_PATH}"
+
+TAGS_DIR = "source/blog/tag"
+
+SITE_SRC  = "source/site"
+SITE_DEST = "public"
+
+BLOG_SRC  = "source/blog"
+BLOG_DEST = "public/blog"
+
+#
+# Jekyll init
+#
+
+namespace :jekyll do
+  task :initialize do
+    gem "jekyll"
+    require "jekyll"
+    require "jekyll/tags/post"
+    require "jekyll/tags/related"
+    @options = Jekyll.configuration("auto" => false, "source" => BLOG_SRC, "destination" => BLOG_DEST)
+    @blog = Jekyll::Site.new(@options)
+    @blog.read_posts("")
+  end
+end
 
 #
 # Build tasks
@@ -24,16 +52,31 @@ desc "Build site, excluding JavaScript libs."
 task :build => "build:default"
 
 namespace :build do
-  task :default do
+  task :default => ["jekyll:initialize", "build:tags"] do
     system "jekyll ./source/site ./public"
-    system "jekyll ./source/blog ./public/blog"
+    @blog.process
   end
+  
+  desc "Build tags"
+  task :tags => "jekyll:initialize" do
+    FileUtils.rm_rf(TAGS_DIR)
+    FileUtils.mkdir_p(TAGS_DIR)
+    tags = @blog.categories
+    tags.each do |tag, posts|
+      File.open(File.join(TAGS_DIR, tag + ".html"), "w") do |file|
+        generate_index posts, file, "title" => "#{tag}"
+      end
+    end
+  end
+  
   desc "Compress JavaScript libs specified in the Jimfile."
   task :js do
     system "jim compress"
   end
+  
   desc "Build site and compress JavaScript libs"
   task :all => ["build", "build:js"]
+  
 end
 
 desc "Sync assets into public folder for local testing."
@@ -78,24 +121,24 @@ task :deploy => "deploy:default"
 
 namespace :deploy do
   task :default do
-    rsync "public/", "#{$user}@#{$server}:#{$path}"
+    rsync "public/", RSYNC_TARGET
   end
   desc "Deploy assets folder to remote server."
   task :assets do
-    rsync "assets/", "#{$user}@#{$server}:#{$path}"
+    rsync "assets/", RSYNC_TARGET
   end
   desc "Deploy both public and assets folders to remote server."
   task :all => "build:all" do
-    rsync ["public/", "assets/"], "#{$user}@#{$server}:#{$path}"
+    rsync ["public/", "assets/"], RSYNC_TARGET
   end
   desc "Deploy all via rsync removing remote files that don't exist locally."
   task :clean => "build:all" do
-    rsync ["public/", "assets/"], "#{$user}@#{$server}:#{$path}", ["--delete"]
+    rsync ["public/", "assets/"], RSYNC_TARGET, ["--delete"]
   end
   desc "Reset remote files completely via 'rm -rf' and redeploy everything via rsync."
   task :reset => "build:all" do
-    system "ssh #{$user}@#{$server} 'cd \"#{$path}\" && rm -rf ./* && rm -rf ./.*'"
-    rsync ["public/", "assets/"], "#{$user}@#{$server}:#{$path}"
+    system "ssh #{USER}@#{SERVER} 'cd \"#{REMOTE_PATH}\" && rm -rf ./* && rm -rf ./.*'"
+    rsync ["public/", "assets/"], RSYNC_TARGET
   end
 end
 
@@ -114,3 +157,12 @@ def rsync(source, dest, options = [])
   system "rsync -vr #{options.join(" ")} #{source} #{dest}"
 end
 
+def generate_index(posts, file, options = {})
+  file.puts YAML.dump(options.merge({"layout" => "tag-page", "robots" => "noindex"}))
+  file.puts "---"
+  posts = posts.sort{|x, y| x.date <=> y.date }.reverse!
+  output = posts.collect do |post|
+    %{{% post #{post.url} %}}
+  end.join("\n")
+  file.puts(output)
+end

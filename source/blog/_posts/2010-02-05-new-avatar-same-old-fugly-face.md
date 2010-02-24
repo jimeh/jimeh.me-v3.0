@@ -1,6 +1,7 @@
 ---
 layout: post
 title: New Avatar, Same Old Fugly Face
+categories: [personal]
 ---
 
 Today marks the day I update my online avatar/profile picture. I've had the same sepia colored half-face avatar for 4 or 5 years now. So it was about time for a change. However, the biggest reason I changed it, was cause I cut my hair short in November, after having long hair for about 10 years.

@@ -4,7 +4,7 @@
 	
 	<div id="header">
 		<div id="title">
-			<a href="/blog/">blog</a>
+			<a href="/blog/">blog</a> / {{ page.title }}
 		</div>
 		<div id="navigation">
 			<a href="/">about</a>
@@ -19,7 +19,7 @@
 	
 	{% include sidebar.html %}
 	
-	{% include paginator.html %}
+	{% include paginator-empty.html %}
 	
 </div>
 

@@ -1,6 +1,7 @@
 ---
 layout: post
 title: Automated Profile Picture Update Service?
+categories: [technology, web-service, idea]
 ---
 
 After I updated my [profile picture][avatar] today, a friend of mine [responded][tweet] with:

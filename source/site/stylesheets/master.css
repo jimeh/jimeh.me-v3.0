@@ -458,6 +458,8 @@ blockquote {
 
 /* @end */
 
+/* @group .sidebar */
+
 .sidebar {
 	float: right;
 	width: 270px;
@@ -465,6 +467,23 @@ blockquote {
 	.sidebar p {
 		margin-bottom: 8px;
 	}
+
+/* @group .section */
+
+	.sidebar .section {
+		
+	}
+		.sidebar .section h2 {
+			font-size: 17px;
+			margin-bottom: 3px;
+			margin-left: 25px;
+		}
+
+/* @end */
+
+
+
+/* @end */
 
 /* @group .post-* */
 
@@ -489,12 +508,27 @@ blockquote {
 		.post-title a:hover {
 			border-bottom: 1px dotted #ccc !important;
 		}
-	.post-title .author {
+
+/* @end */
+
+/* @group .post-title-sub */
+
+.post-title-sub {
+	color: #bbb;
+	font-size: 13px;
+	position: absolute;
+	bottom: -10px;
+	left: 0px;
+}
+	.post-title-sub a {
 		color: #bbb;
-		font-size: 13px;
-		position: absolute;
-		bottom: -10px;
-		left: 0px;
+	}
+		.post-title-sub a:hover {
+			border-color: #bbb !important;
+		}
+	.post-title-sub .hash {
+		color: #eee;
+		font-style: normal;
 	}
 
 /* @end */
@@ -690,11 +724,6 @@ blockquote {
 .recent-articles {
 	font-size: 13px;
 }
-	.recent-articles h2 {
-		font-size: 17px;
-		margin-bottom: 3px;
-		margin-left: 25px;
-	}
 	.recent-articles ul {
 		color: #ddd;
 		list-style: none;

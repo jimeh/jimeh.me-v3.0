@@ -3,23 +3,6 @@ layout: post-list
 title: jimeh / blog
 ---
 
-{% for post in paginator.posts %}
-<div class="post-item">
-	<div class="post-meta">
-	    <p class="date">{{ post.date | date: "<i>%d</i><b>%b</b>" }}</p>
-	</div>
-
-	<h1 class="post-title">
-		<a href="/blog{{ post.url }}">{{ post.title }}</a>
-		<span class="author">by Jim Myhrberg</span>
-	</h1>
-
-	<div class="post-content">
-		{{ post.content }}
-	</div>
-	
-	<p class="post-comment-link">
-		<a href="/blog{{ post.url }}#disqus_thread">Comments</a>
-	</p>
-</div>
+{% for page in paginator.posts %}
+	{% include post-div.html %}
 {% endfor %}

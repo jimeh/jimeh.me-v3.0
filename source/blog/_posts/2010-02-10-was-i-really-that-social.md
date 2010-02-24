@@ -1,6 +1,7 @@
 ---
 layout: post
 title: Was I Really “That” Social?
+categories: [personal, technology, social]
 ---
 
 As some of you might have noticed the last couple of days, I haven't been online much on IM networks. I'm not sure what originally kept me from launching Adium the other day, but along the way I've come to a realization.
