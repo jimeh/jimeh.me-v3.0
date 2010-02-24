@@ -23,7 +23,7 @@
 				{{ page.title }}
 				<div class="post-title-sub">
 					by Jim Myhrberg – tags:
-					{% for tag in page.categories %} <a href="/blog/tag/{{tag}}" rel="tag"><i class="hash">#</i>{{tag}}</a>{% if forloop.last != true %},{% endif %}{% endfor %}
+					{% for tag in page.categories %} <a href="/blog/tag/{{tag}}/" rel="tag"><i class="hash">#</i>{{tag}}</a>{% if forloop.last != true %},{% endif %}{% endfor %}
 				</div>
 			</h1>
 
@@ -39,10 +39,7 @@
 	
 	{% include sidebar.html %}
 	
-	<div class="post-paginator">
-		<a href="/blog/archive/">archive</a><br />
-		<a href="http://feeds.feedburner.com/jimeh">rss</a>
-	</div>
+	{% include paginator-empty.html %}
 	
 </div>
 

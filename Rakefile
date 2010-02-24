@@ -63,7 +63,8 @@ namespace :build do
     FileUtils.mkdir_p(TAGS_DIR)
     tags = @blog.categories
     tags.each do |tag, posts|
-      File.open(File.join(TAGS_DIR, tag + ".html"), "w") do |file|
+      FileUtils.mkdir_p(File.join(TAGS_DIR, tag))
+      File.open(File.join(TAGS_DIR, tag, "index.html"), "w") do |file|
         generate_index posts, file, "title" => "#{tag}"
       end
     end
