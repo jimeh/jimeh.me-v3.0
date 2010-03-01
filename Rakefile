@@ -91,7 +91,7 @@ end
 #
 
 desc "Start jekyll server."
-task :server => "server:default" do
+task :server do
   system "jekyll source/site public --server --auto"
 end
 
