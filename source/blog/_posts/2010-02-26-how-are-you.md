@@ -23,3 +23,5 @@ categories: [personal, technology, humor]
     *** System status: CRITICAL
     *** Status summary: Visually impaired anti-social Zombie with
                         corrupt sense of humor.
+
+This was originally a response I wrote to some chick I don't know who messaged me out of the blue asking "how are you?". After sending it, I thought it was funny enough to post here... lol
