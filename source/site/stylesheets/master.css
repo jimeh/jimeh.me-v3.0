@@ -66,9 +66,21 @@ html,body,div,span,applet,object,iframe,h1,h2,h3,h4,h5,h6,p,blockquote,pre,a,abb
 
 /* @group Basic HTML */
 
+html {
+	overflow-y: auto;
+	background-color: transparent;
+}
+
 body {
 	background: #fff;
 	font: 15px/1.5 'Colaborate-ThinRegular', 'Helvetica Neue', Arial, 'Liberation Sans', FreeSans, sans-serif;
+	position: absolute;
+	top: 0;
+	left: 0;
+	bottom: 0;
+	right: 10px;
+	overflow-y: scroll;
+	overflow-x: hidden;
 }
 
 a {
@@ -234,37 +246,38 @@ h6 {
 
 /* @group ::-webkit-scrollbar */
 
-/*::-webkit-scrollbar {
+::-webkit-scrollbar {
     width: 6px;
     height: 6px;
-}*/
+}
 
-/*::-webkit-scrollbar-button:start:decrement,
+::-webkit-scrollbar-button:start:decrement,
 ::-webkit-scrollbar-button:end:increment {
-    display: block;
-    height: 10px;
-}*/
+	height: 10px;
+	display: block;
+	background-color: transparent;
+}
 
-/*::-webkit-scrollbar-button:vertical:increment {
+::-webkit-scrollbar-button:vertical:increment {
     background-color: #fff;
-}*/
+}
 
-/*::-webkit-scrollbar-track-piece {
+::-webkit-scrollbar-track-piece {
     background-color: #eee;
     -webkit-border-radius: 3px;
-}*/
+}
 
-/*::-webkit-scrollbar-thumb:vertical {
+::-webkit-scrollbar-thumb:vertical {
     height: 50px;
     background-color: #ccc;
     -webkit-border-radius: 3px;
-}*/
+}
 
-/*::-webkit-scrollbar-thumb:horizontal {
+::-webkit-scrollbar-thumb:horizontal {
     width: 50px;
     background-color: #ccc;
     -webkit-border-radius: 3px;
-}*/
+}
 
 /* @end */
 
