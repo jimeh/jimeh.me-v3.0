@@ -107,8 +107,25 @@ namespace :auto do
     system "jekyll source/site public --auto"
   end
   desc "Auto-rebuild blog when files are changed."
-  task :blog do
-    system "jekyll source/blog public/blog --auto"
+  task :blog => "build" do
+    require 'directory_watcher'
+
+    puts "Auto-regenerating enabled: #{BLOG_SRC} -> #{BLOG_DEST}"
+
+    dw = DirectoryWatcher.new(BLOG_SRC)
+    dw.interval = 1
+    dw.glob = globs(BLOG_SRC)
+
+    dw.add_observer do |*args|
+      t = Time.now.strftime("%Y-%m-%d %H:%M:%S")
+      puts "[#{t}] regeneration: #{args.size} files changed"
+      Rake::Task['build'].invoke
+      @blog.process
+    end
+
+    dw.start
+    
+    loop { sleep 500 }
   end
 end
 
@@ -166,4 +183,13 @@ def generate_index(posts, file, options = {})
     %{{% post #{post.url} %}}
   end.join("\n")
   file.puts(output)
+end
+
+def globs(source)
+  Dir.chdir(source) do
+    dirs = Dir['*'].select { |x| File.directory?(x) }
+    dirs -= ['_site']
+    dirs = dirs.map { |x| "#{x}/**/*" }
+    dirs += ['*']
+  end
 end
