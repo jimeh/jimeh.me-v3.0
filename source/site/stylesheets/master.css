@@ -78,10 +78,22 @@ body {
 a {
   color: #1193F6;
   text-decoration: none;
+  border-bottom: 2px solid transparent;
+	-webkit-transition-duration: 0.2s;
+	-webkit-transition-property: border-bottom;
+  -webkit-transition-timing-function: ease-in;
+	-moz-transition-duration: 0.2s;
+	-moz-transition-property: border-bottom;
+  -moz-transition-timing-function: ease-in;
 }
   a:hover {
-/*    border-bottom: 1px dotted;*/
     border-bottom: 2px solid #E1EAFE;
+/*    -webkit-transition-duration: 0.3s;
+    -webkit-transition-property: border-bottom;
+    -webkit-transition-timing-function: ease-in;
+    -moz-transition-duration: 0.3s;
+    -moz-transition-property: border-bottom;
+    -moz-transition-timing-function: ease-in;*/
   }
 
 b, strong {
@@ -317,6 +329,7 @@ span.fancybox {
     #navigation a:hover {
       border: none;
       text-decoration: none;
+      border-bottom: 2px solid #F8F8F8;
     }
     #navigation a.selected {
       color: #1193F6;
@@ -474,9 +487,10 @@ blockquote {
 }
   .post-title a {
     color: #000;
+    border-bottom: 2px solid transparent;
   }
     .post-title a:hover {
-      border-bottom: 1px dotted #ccc !important;
+      
     }
 
 /* @end */
@@ -494,7 +508,7 @@ blockquote {
     color: #bbb;
   }
     .post-title-sub a:hover {
-      border-color: #bbb !important;
+      border-bottom: 2px solid #F8F8F8 !important;
     }
   .post-title-sub .hash {
     color: #eee;
