@@ -1,16 +1,16 @@
 html {
-	overflow-y: auto;
-	background-color: transparent;
+   overflow-y: auto;
+   background-color: transparent;
 }
 
 body {
-	position: absolute;
-	top: 0;
-	left: 0;
-	bottom: 0;
-	right: 10px;
-	overflow-y: scroll;
-	overflow-x: hidden;
+   position: absolute;
+   top: 0;
+   left: 0;
+   bottom: 0;
+   right: 10px;
+   overflow-y: scroll;
+   overflow-x: hidden;
 }
 
 /* @group ::-webkit-scrollbar */
