@@ -100,10 +100,10 @@ end
 #
 
 desc "Auto-rebuild site when files are changed."
-task :auto => "auto:default"
+task :auto => "auto:site"
 
 namespace :auto do
-  task :default do
+  task :site do # default
     system "jekyll source/site public --auto"
   end
   desc "Auto-rebuild blog when files are changed."
