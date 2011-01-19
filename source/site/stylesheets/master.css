@@ -628,27 +628,44 @@ blockquote {
 /* @group #about */
 
 #about {
-	width: 454px;
-	height: 170px;
-	position: absolute;
-	top: 50%;
-	left: 50%;
-	margin-top: -150px;
-	margin-left: -228px;
+  width: 454px;
+  height: 170px;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  margin-top: -150px;
+  margin-left: -228px;
 }
-	#about .info {
-		color: #bbb;
-		margin: 0px auto;
-		/*width: 100%;*/
-	}
-		#about .info .label {
-			text-align: right;
-			padding-right: 5px;
-			padding-bottom: 10px;
-		}
-			#about .info .label a {
-				color: #bbb;
-			}
+  #about .avatar {
+    position: absolute;
+    top: -23px;
+    left: -95px;
+    margin: 0px 10px 10px 0px;
+    cursor: default;
+    -webkit-transform: rotate(-2deg);
+    -moz-transform: rotate(-2deg);
+  }
+    #about .avatar img {
+     opacity: 0.8;
+     -webkit-transition: opacity 0.5s linear;
+     -moz-transition: opacity 0.5s linear;
+    }
+      #about .avatar:hover img {
+       opacity: 1;
+      }
+  #about .info {
+    color: #bbb;
+    margin: 0px auto;
+    /*width: 100%;*/
+  }
+    #about .info .label {
+      text-align: right;
+      padding-right: 5px;
+      padding-bottom: 10px;
+    }
+      #about .info .label a {
+        color: #bbb;
+      }
 
 /* @end */
 
