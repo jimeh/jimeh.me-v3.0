@@ -72,7 +72,7 @@ html {
 
 body {
   background: #fff;
-  font: 15px/1.5 'Colaborate-ThinRegular', 'Helvetica Neue', Arial, 'Liberation Sans', FreeSans, sans-serif;
+  font: 15px/1.5 'Colaborate-ThinRegular', 'HelveticaNeue-Light', 'Helvetica Neue', Helvetica, Arial, 'Liberation Sans', FreeSans, sans-serif;
 }
 
 a {
@@ -97,7 +97,7 @@ a {
   }
 
 b, strong {
-  font-family: 'Colaborate-RegularRegular', 'Helvetica Neue', Arial, 'Liberation Sans', FreeSans, sans-serif;
+  font-family: 'Colaborate-RegularRegular', 'Helvetica Neue', Helvetica, Arial, 'Liberation Sans', FreeSans, sans-serif;
   font-weight: normal;
 }
 
@@ -152,11 +152,11 @@ fieldset {
 /* @group Headings */
 
 h1, h2, h3, h4, h5, h6 {
-  font-family: 'ColaborateLightRegular', 'Helvetica Neue', Arial, 'Liberation Sans', FreeSans, sans-serif;
+  font-family: 'ColaborateLightRegular', 'HelveticaNeue-Light', 'Helvetica Neue', Helvetica, Arial, 'Liberation Sans', FreeSans, sans-serif;
   font-weight: normal;
 }
   h1.thin, h2.thin, h3.thin, h4.thin, h5.thin, h6.thin {
-    font-family: 'Colaborate-ThinRegular', 'Helvetica Neue', Arial, 'Liberation Sans', FreeSans, sans-serif;
+    font-family: 'Colaborate-ThinRegular', 'HelveticaNeue-Light', 'Helvetica Neue', Helvetica, Arial, 'Liberation Sans', FreeSans, sans-serif;
   }
 
 h1 {
@@ -268,7 +268,7 @@ span.fancybox {
     display: none;
     background: rgba(0,0,0,0.5);
     color: rgba(255,255,255,0.75);
-    font-family: 'Helvetica Neue', Arial, 'Liberation Sans', FreeSans, sans-serif;
+    font-family: 'Helvetica Neue', Helvetica, Arial, 'Liberation Sans', FreeSans, sans-serif;
     font-style: normal;
     font-size: 11px;
     position: absolute;
@@ -548,7 +548,7 @@ blockquote {
       display: block;
     }
     .post-meta .date b {
-      font-family: 'ColaborateLightRegular', 'Helvetica Neue', Arial, 'Liberation Sans', FreeSans, sans-serif;
+      font-family: 'ColaborateLightRegular', 'HelveticaNeue-Light', 'Helvetica Neue', Helvetica, Arial, 'Liberation Sans', FreeSans, sans-serif;
       font-weight: normal;
       font-size: 14px;
       display: block;
