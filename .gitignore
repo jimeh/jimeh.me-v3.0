@@ -1,6 +1,4 @@
 .DS_Store
 .bundle
-assets
-assets/*
 public/*
 source/blog/tag/*
