@@ -89,6 +89,17 @@ alias ca="bundle exec cap"
 alias cu="bundle exec cucumber"
 {% endhighlight %}
 
+**Update:** Instead of using an alias to set Bundler options, you can set
+default Bundler config options in `~/.bundle/config`. Mine looke liks this:
+
+{% highlight yaml %}
+---
+BUNDLE_PATH: vendor/bundle
+BUNDLE_BIN: .bin
+{% endhighlight %}
+
+Run `bundle help config` for more information.
+
 
 ## Running Ruby Apps
 
