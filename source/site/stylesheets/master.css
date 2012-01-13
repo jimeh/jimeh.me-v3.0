@@ -651,9 +651,9 @@ blockquote {
   position: absolute;
   top: 50%;
   left: 50%;
-  margin: -137px 0px 0px -150px;
-  height: 274px;
-  width: 300px;
+  margin: -150px 0px 0px -250px;
+  height: 300px;
+  width: 500px;
 }
 
 /* @end */
