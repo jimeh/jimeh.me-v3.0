@@ -56,7 +56,7 @@ namespace :build do
     system "jekyll ./source/site ./public"
     @blog.process
   end
-  
+
   desc "Build tags"
   task :tags => "jekyll:initialize" do
     FileUtils.rm_rf(TAGS_DIR)
@@ -69,15 +69,15 @@ namespace :build do
       end
     end
   end
-  
+
   desc "Compress JavaScript libs specified in the Jimfile."
   task :js do
     system "jim compress"
   end
-  
+
   desc "Build site and compress JavaScript libs"
   task :all => ["build", "build:js"]
-  
+
 end
 
 desc "Sync assets into public folder for local testing."
@@ -124,7 +124,7 @@ namespace :auto do
     end
 
     dw.start
-    
+
     loop { sleep 500 }
   end
 end
