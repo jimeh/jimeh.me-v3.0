@@ -1,10 +1,13 @@
-// bundled_path: public/javascripts/bundled.js
-// compressed_path: public/javascripts/libs.js
-// vendor_dir: source/site/javascripts/
-
-// libs
-source/site/javascripts/libs/jquery-1.4.2
-source/site/javascripts/libs/jquery.easing-1.3
-
-// fancybox
-source/site/resources/fancybox/fancybox
+{
+  "compressed_suffix": "",
+  "compressed_path": "public/javascripts/libs.js",
+  "vendor_dir": "source/site/javascripts/",
+  "bundle_dir": "public/javascripts",
+  "bundles": {
+    "libs": [
+      "source/site/javascripts/libs/jquery-1.4.2",
+      "source/site/javascripts/libs/jquery.easing-1.3",
+      "source/site/resources/fancybox/fancybox"
+    ]
+  }
+}
