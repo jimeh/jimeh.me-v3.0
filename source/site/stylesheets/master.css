@@ -678,14 +678,12 @@ blockquote {
     -webkit-transform: rotate(-2deg);
     -moz-transform: rotate(-2deg);
   }
-    #about .avatar img {
-     opacity: 0.8;
-     -webkit-transition: opacity 0.5s linear;
-     -moz-transition: opacity 0.5s linear;
+    #about .avatar:hover {
+
     }
-      #about .avatar:hover img {
-       opacity: 1;
-      }
+    #about .avatar img {
+
+    }
   #about .info {
     color: #bbb;
     margin: 0px auto;
