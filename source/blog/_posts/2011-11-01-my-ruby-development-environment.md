@@ -64,16 +64,16 @@ And because I'm lazy, I have a handy bash alias for my `bundle install`
 command.
 
 {% highlight bash %}
-alias bi="bundle install --path vendor/bundle --binstubs=.bin"
+alias bi="bundle install --path vendor/bundle --binstubs=vendor/bundle/bin"
 {% endhighlight %}
 
 The `--binstubs` option there leads me into how I avoid typing `bundle exec`
 before every command. It tells Bundler to package binaries from all the
-installed gems into a hidden `.bin` directory within the project. Simply add
-the following at the very end of your `~/.profile` or `~/.bash_profile`:
+installed gems into `vendor/bundle/bin` directory within the project. Simply
+add the following at the very end of your `~/.profile` or `~/.bash_profile`:
 
 {% highlight bash %}
-export PATH="./.bin:$PATH"
+export PATH="./vendor/bundle/bin:$PATH"
 {% endhighlight %}
 
 This enables you to call all of the project's gem binaries like normal,
@@ -95,7 +95,7 @@ default Bundler config options in `~/.bundle/config`. Mine looke liks this:
 {% highlight yaml %}
 ---
 BUNDLE_PATH: vendor/bundle
-BUNDLE_BIN: .bin
+BUNDLE_BIN: vendor/bundle/bin
 {% endhighlight %}
 
 Run `bundle help config` for more information.
